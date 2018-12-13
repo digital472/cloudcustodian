@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('CustodianExecute') {
       steps {
-        sh '''pip install c7n
-custodian run --output-dir=. /home/ec2-user/custodian.yml'''
+        sh '/usr/local/bin/custodian run --output-dir=. /home/ec2-user/custodian.yml'
       }
     }
   }
