@@ -6,7 +6,7 @@ pipeline {
         sh '''virtualenv --python=/usr/bin/python custodian
 source custodian/bin/activate
 pip install c7n
-custodian custodian run --output-dir=. /home/ec2-user/custodian.yml'''
+custodian run --output-dir=. /home/ec2-user/custodian.yml'''
       }
     }
   }
