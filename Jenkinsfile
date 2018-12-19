@@ -6,7 +6,7 @@ pipeline {
         awsIdentity()
         sh '''
 unzip deployment.zip
-/usr/local/bin/custodian run --output-dir=. my-first-policy.yml'''
+/usr/local/bin/custodian run --output-dir=. my-first-policy.yml --region us-gov-west-1'''
       }
     }
   }
